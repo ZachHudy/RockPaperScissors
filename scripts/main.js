@@ -6,6 +6,20 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     let winLose = '';
     let ps = playerSelection.toLowerCase();
+    let result = ps+computerSelection;
+    switch (result) {
+        case 'rockrock':
+            winLose = 'Tie';
+            break;
+        case 'rockpaper':
+            winLose = 'Lose';
+            break;
+        case 'rockscissors':
+            winLose = 'Win';
+            break;
+    }
+
+    return `You ${winLose}.`
     
 }
 
