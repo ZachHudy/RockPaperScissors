@@ -4,11 +4,11 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    let winLose = '';
-    let winner = '';
-    let loser = '';
-    let ps = playerSelection.toLowerCase();
-    let result = ps+computerSelection;
+    let winLose = ''; // String announcing if player wins or loses
+    let winner = ''; // String for winning hand
+    let loser = ''; // String for losing hand
+    let ps = playerSelection.toLowerCase(); // correct player selection for case
+    let result = ps+computerSelection; // create result for switch statement to determine outcome
     switch (result) {
         case 'rockrock':
             winLose = 'It\'s a tie!';
