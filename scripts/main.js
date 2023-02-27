@@ -10,13 +10,17 @@ function playRound(playerSelection, computerSelection) {
     let ps = playerSelection.toLowerCase(); // correct player selection for case
     let result = ps+computerSelection; // create result for switch statement to determine outcome
     switch (result) {
-        case 'rockrock':
-            winLose = 'It\'s a tie!';
-            break;
-        case 'rockpaper':
+        // cases with tie; return from block early
+        case 'rockrock':,
+        case 'scissorsscissors':,
+        case 'paperpaper':
+            return `It's a tie!`;
+        // cases with player loss
+            case 'rockpaper':
             winLose = 'Sorry, you lose.';
             break;
-        case 'rockscissors':
+        // cases with player win
+            case 'rockscissors':
             winLose = 'You win!';
             break;
     }
