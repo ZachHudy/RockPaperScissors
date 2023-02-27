@@ -11,16 +11,16 @@ function playRound(playerSelection, computerSelection) {
     let result = ps+computerSelection; // create result for switch statement to determine outcome
     switch (result) {
         // cases with tie; return from block early
-        case 'rockrock':,
-        case 'scissorsscissors':,
+        case 'rockrock':
+        case 'scissorsscissors':
         case 'paperpaper':
             return `It's a tie!`;
         // cases with player loss
-            case 'rockpaper':
+        case 'rockpaper':
             winLose = 'Sorry, you lose.';
             break;
         // cases with player win
-            case 'rockscissors':
+        case 'rockscissors':
             winLose = 'You win!';
             break;
     }
@@ -31,4 +31,5 @@ function playRound(playerSelection, computerSelection) {
 
 const playerSelection = 'rock';
 const computerSelection = getComputerChoice();
+console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
