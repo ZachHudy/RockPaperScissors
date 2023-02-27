@@ -20,16 +20,20 @@ function playRound(playerSelection, computerSelection) {
         case 'scissorsrock':
         case 'paperscissors':
             winLose = 'Sorry, you lose.';
+            winner = computerSelection[0].toUpperCase() + computerSelection.slice(1);
+            loser = ps;
             break;
         // cases with player win
         case 'rockscissors':
         case 'paperrock':
         case 'scissorspaper':
             winLose = 'You win!';
+            winner = ps[0].toUpperCase() + ps.slice(1);
+            loser = computerSelection;
             break;
     }
 
-    return `${winLose} `
+    return `${winLose} ${winner} beats ${loser}.`
     
 }
 
