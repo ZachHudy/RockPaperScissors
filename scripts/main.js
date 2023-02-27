@@ -17,10 +17,14 @@ function playRound(playerSelection, computerSelection) {
             return `It's a tie!`;
         // cases with player loss
         case 'rockpaper':
+        case 'scissorsrock':
+        case 'paperscissors':
             winLose = 'Sorry, you lose.';
             break;
         // cases with player win
         case 'rockscissors':
+        case 'paperrock':
+        case 'scissorspaper':
             winLose = 'You win!';
             break;
     }
