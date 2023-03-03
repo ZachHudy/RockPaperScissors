@@ -68,10 +68,8 @@ function game() {
         let computerChoice = getComputerChoice();
         console.log(playRound(playerChoice, computerChoice));
     }
-
+    console.log((wins > losses ? 'You win!' : 
+        wins < losses ? 'You lose' : 'Tie'
+    ));
 }
 
-const playerSelection = 'rock';
-const computerSelection = getComputerChoice();
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
