@@ -50,6 +50,16 @@ function playRound(playerSelection, computerSelection) {
     
 }
 
+// Create a new function to play a 5 round game
+function game() {
+    // Create a for loop
+    for(let i = 0; i < 5; i++) {
+        let playerChoice = getPlayerChoice();
+        let computerChoice = getComputerChoice();
+        console.log(playRound(playerChoice, computerChoice));
+    }
+}
+
 const playerSelection = 'rock';
 const computerSelection = getComputerChoice();
 console.log(computerSelection);
