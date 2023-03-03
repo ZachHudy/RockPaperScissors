@@ -1,3 +1,7 @@
+let wins = 0;
+let losses = 0;
+let ties = 0;
+
 function getComputerChoice() {
     let computerChoice = ['rock', 'paper', 'scissors'];
     return computerChoice[Math.floor(Math.random() * 3)];
