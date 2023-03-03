@@ -59,10 +59,11 @@ function playRound(playerSelection, computerSelection) {
 
 // Create a new function to play a 5 round game
 function game() {
-    // Create a for loop
+    // reset win/loss/tie variables
     wins = 0;
     losses = 0;
     ties = 0;
+    // Create a for loop to play multiple rounds
     for(let i = 0; i < 5; i++) {
         let playerChoice = getPlayerChoice();
         let computerChoice = getComputerChoice();
