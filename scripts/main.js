@@ -9,7 +9,11 @@ function getPlayerChoice() {
     let choices = ['rock', 'paper', 'scissors']; // Create array to hold possible choices
     let playerChoice = prompt('Please enter "rock", "paper", or "scissors".').trim(); // Have player input choice.
 
-    console.log(playerChoice);
+    while (!choices.includes(playerChoice.toLowerCase())) {
+        playerChoice = prompt('Invalid choice. Please enter "rock", "paper", or "scissors".');
+    }
+
+    return playerChoice;
 }
 
 function playRound(playerSelection, computerSelection) {
