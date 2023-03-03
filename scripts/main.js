@@ -3,6 +3,19 @@ function getComputerChoice() {
     return computerChoice[Math.floor(Math.random() * 3)];
 }
 
+
+// Create a helper function to get the player choice
+function getPlayerChoice() {
+    let choices = ['rock', 'paper', 'scissors']; // Create array to hold possible choices
+    let playerChoice = prompt('Please enter "rock", "paper", or "scissors".').trim(); // Have player input choice.
+
+    while (!choices.includes(playerChoice.toLowerCase())) {
+        playerChoice = prompt('Invalid choice. Please enter "rock", "paper", or "scissors".');
+    }
+
+    return playerChoice;
+}
+
 function playRound(playerSelection, computerSelection) {
     let winLose = ''; // String announcing if player wins or loses
     let winner = ''; // String for winning hand
