@@ -31,11 +31,13 @@ function playRound(playerSelection, computerSelection) {
         case 'rockrock':
         case 'scissorsscissors':
         case 'paperpaper':
+            ties++;
             return `It's a tie!`;
         // cases with player loss
         case 'rockpaper':
         case 'scissorsrock':
         case 'paperscissors':
+            losses++;
             winLose = 'Sorry, you lose.';
             winner = computerSelection[0].toUpperCase() + computerSelection.slice(1);
             loser = ps;
@@ -45,6 +47,7 @@ function playRound(playerSelection, computerSelection) {
         case 'paperrock':
         case 'scissorspaper':
             winLose = 'You win!';
+            wins++;
             winner = ps[0].toUpperCase() + ps.slice(1);
             loser = computerSelection;
             break;
@@ -57,11 +60,15 @@ function playRound(playerSelection, computerSelection) {
 // Create a new function to play a 5 round game
 function game() {
     // Create a for loop
+    wins = 0;
+    losses = 0;
+    ties = 0;
     for(let i = 0; i < 5; i++) {
         let playerChoice = getPlayerChoice();
         let computerChoice = getComputerChoice();
         console.log(playRound(playerChoice, computerChoice));
     }
+
 }
 
 const playerSelection = 'rock';
