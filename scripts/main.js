@@ -2,6 +2,15 @@ let wins = 0;
 let losses = 0;
 let ties = 0;
 
+const rockBtn = document.querySelector('#rock');
+const paperBtn = document.querySelector('#paper');
+const scissorsBtn = document.querySelector('#scissors');
+
+scissorsBtn.addEventListener('click', (e) => {
+    const btn = e.target.getAttribute('id');
+    console.log(btn);
+})
+
 function getComputerChoice() {
     let computerChoice = ['rock', 'paper', 'scissors'];
     return computerChoice[Math.floor(Math.random() * 3)];
