@@ -27,6 +27,12 @@ header {
     gap: 8px;
 }
 
+/*
+========================
+Button Styling
+========================
+*/
+
 .btn {
     height: 60px;
     width: 90px;
