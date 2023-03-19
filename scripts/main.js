@@ -2,14 +2,15 @@ let wins = 0;
 let losses = 0;
 let ties = 0;
 
-const rockBtn = document.querySelector('#rock');
-const paperBtn = document.querySelector('#paper');
-const scissorsBtn = document.querySelector('#scissors');
+let btns = document.querySelectorAll('.btn');
+btns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const pc = btn.id;
+        const cc = getComputerChoice();
+        playRound(pc, cc);
+    });
+});
 
-scissorsBtn.addEventListener('click', (e) => {
-    const btn = e.target.getAttribute('id');
-    console.log(btn);
-})
 
 function getComputerChoice() {
     let computerChoice = ['rock', 'paper', 'scissors'];
