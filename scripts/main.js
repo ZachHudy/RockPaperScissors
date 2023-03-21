@@ -24,6 +24,7 @@ btns.forEach((btn) => {
         if (wins + losses === 5) {
             clear.classList.toggle('hidden');
             buttons.classList.toggle('hidden');
+            gameOutput.textContent = getWinner();
         }
     });
 });
@@ -38,24 +39,15 @@ clrBtn.addEventListener('click', () => {
     gameOutput.textContent = '';
 });
 
+function getWinner() {
+    return (wins > losses) ? 'YOU WIN!' : 'You lose, punk!';
+}
 
 function getComputerChoice() {
     let computerChoice = ['rock', 'paper', 'scissors'];
     return computerChoice[Math.floor(Math.random() * 3)];
 }
 
-
-// Create a helper function to get the player choice
-function getPlayerChoice() {
-    let choices = ['rock', 'paper', 'scissors']; // Create array to hold possible choices
-    let playerChoice = prompt('Please enter "rock", "paper", or "scissors".').trim(); // Have player input choice.
-
-    while (!choices.includes(playerChoice.toLowerCase())) {
-        playerChoice = prompt('Invalid choice. Please enter "rock", "paper", or "scissors".');
-    }
-
-    return playerChoice;
-}
 
 function playRound(playerSelection, computerSelection) {
     let winLose = ''; // String announcing if player wins or loses
