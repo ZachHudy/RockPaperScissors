@@ -1,6 +1,7 @@
 let wins = 0;
 let losses = 0;
 let ties = 0;
+let gameCount = 0;
 
 let btns = document.querySelectorAll('.btn');
 btns.forEach((btn) => {
