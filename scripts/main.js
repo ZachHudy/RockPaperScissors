@@ -1,17 +1,29 @@
 let wins = 0;
 let losses = 0;
 let ties = 0;
-let gameCount = 0;
 const gameOutput = document.querySelector('#win-output');
+const userScore = document.querySelector('#user-score');
+const compScore = document.querySelector('#computer-score');
+const buttons = document.querySelector('#buttons');
+const clear = document.querySelector('#clear');
+
+userScore.textContent = wins;
+compScore.textContent = losses;
 
 
 
-let btns = document.querySelectorAll('.btn');
+let btns = document.querySelectorAll('.play-btn');
 btns.forEach((btn) => {
     btn.addEventListener('click', () => {
         const pc = btn.id;
         const cc = getComputerChoice();
-        gameOutput.textContent = playRound(pc, cc) + wins;
+        gameOutput.textContent = playRound(pc, cc);
+        userScore.textContent = wins;
+        compScore.textContent = losses;
+        if (wins + losses === 5) {
+            clear.classList.toggle('hidden');
+            buttons.classList.toggle('hidden');
+        }
     });
 });
 

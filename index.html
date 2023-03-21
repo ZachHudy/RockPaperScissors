@@ -11,20 +11,22 @@
             <h3>by Zach Hudy</h3>
         </header>
         <section id="buttons">
-            <button id="rock" class="btn">Rock<br>&#9994;</button>
-            <button id="paper" class="btn">Paper<br>&#9995;</button>
-            <button id="scissors" class="btn">Scissors<br>&#9996;</button>
+            <button id="rock" class="btn play-btn">Rock<br>&#9994;</button>
+            <button id="paper" class="btn play-btn">Paper<br>&#9995;</button>
+            <button id="scissors" class="btn play-btn">Scissors<br>&#9996;</button>
         </section>
         <section id="clear" class="hidden">
             <button class="btn">Clear Round</button>
         </section>
         <div id="results">
             <div id="win-counts">
-                <div id="user-score" class="scoreboard">
+                <div class="scoreboard">
                     <h2>Your Score: </h2>
+                    <span id="user-score" class="score"></span>
                 </div>
-                <div id="computer-score" class="scoreboard">
+                <div class="scoreboard">
                     <h2>Computer Score: </h2>
+                    <span id="computer-score" class="score"></span>
                 </div>
             </div>
             <div id="round-winner">
