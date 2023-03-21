@@ -6,6 +6,7 @@ const userScore = document.querySelector('#user-score');
 const compScore = document.querySelector('#computer-score');
 const buttons = document.querySelector('#buttons');
 const clear = document.querySelector('#clear');
+const clrBtn = document.querySelector('#clear-button');
 
 userScore.textContent = wins;
 compScore.textContent = losses;
@@ -25,6 +26,16 @@ btns.forEach((btn) => {
             buttons.classList.toggle('hidden');
         }
     });
+});
+
+clrBtn.addEventListener('click', () => {
+    wins = 0;
+    losses = 0;
+    userScore.textContent = wins;
+    compScore.textContent = losses;
+    clear.classList.toggle('hidden');
+    buttons.classList.toggle('hidden');
+    gameOutput.textContent = '';
 });
 
 
