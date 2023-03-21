@@ -2,6 +2,7 @@ let wins = 0;
 let losses = 0;
 let ties = 0;
 let gameCount = 0;
+const gameOutput = document.querySelector('#win-output');
 
 
 
@@ -10,7 +11,7 @@ btns.forEach((btn) => {
     btn.addEventListener('click', () => {
         const pc = btn.id;
         const cc = getComputerChoice();
-        playRound(pc, cc);
+        gameOutput.textContent = playRound(pc, cc) + wins;
     });
 });
 

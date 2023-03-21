@@ -21,7 +21,8 @@ header {
     margin: 30px 0 50px 0;
 }
 
-#buttons {
+#buttons,
+#clear {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,3 +61,15 @@ h1,
 h3 {
     text-align: center;
 }
+
+/*
+=========================
+Hide Content
+=========================
+*/
+
+.hidden {
+    display: none !important;
+}
+
+
